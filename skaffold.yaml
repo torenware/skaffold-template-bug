@@ -1,0 +1,16 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+metadata:
+  name: skaffold--
+build:
+  artifacts:
+  - image: test-bug
+    docker:
+      dockerfile: Dockerfile
+      buildArgs:
+        #SEE_MY_ARG: buildArgs w/o a template
+        SEE_MY_ARG: "{{.SEE_MY_ARG}}"
+deploy:
+  kubectl:
+    manifests:
+    - sample.yaml

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: sample-bug
+  name: sample-bug
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-bug
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+       app: sample-bug
+    spec:
+      containers:
+      - image: test-bug
+        name: test-bug
+        resources: {}
+status: {}

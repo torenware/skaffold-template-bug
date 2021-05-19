@@ -1,0 +1,14 @@
+{
+  "name": "skaffold-5841",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "execute": "node src/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "description": "Illustrate skaffold issue #5841",
+  "author": "Rob Thorne <rob@torenware.com>"
+}
